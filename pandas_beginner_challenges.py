@@ -27,9 +27,9 @@ student_data = {
              "Science", "Robotics"]
 }
 
-students = pd.DataFrame(student_data)
-students.to_csv('students.csv', index=False)
-df = pd.read_csv('students.csv')
+students = pd.DataFrame(student_data) #task 1
+students.to_csv('students.csv', index=False) #task 2
+df = pd.read_csv('students.csv') #task 3
 
 task_4 = df.loc[:, 'math']
 task_5 = df.loc[:, ['name', 'math', 'english']]
@@ -43,10 +43,10 @@ task_12 = df.loc[df['math'] >= 85]
 task_13 = df.loc[(df['study_hours'] >= 8) & (df['math'] >= 85),
                  ["name", "math", "study_hours"]]
 task_14 = df.loc[(df['club'] == 'Science') | (df['english'] >= 90)]
-df['total_score'] = df[['math', 'english', 'science']].sum(axis=1)
-df['average_score'] = df[['math', 'english', 'science']].mean(axis=1)
-df['passed'] = True
-df.loc[df['average_score'] < 75, 'passed'] = False
+df['total_score'] = df[['math', 'english', 'science']].sum(axis=1) #task 15
+df['average_score'] = df[['math', 'english', 'science']].mean(axis=1) #task 16
+df['passed'] = True #task 17
+df.loc[df['average_score'] < 75, 'passed'] = False #task 18
 task_19 = df['math'].mean()
 task_20 = df['english'].max()
 task_21 = df['science'].min()
