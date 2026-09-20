@@ -31,6 +31,7 @@ students = pd.DataFrame(student_data) #task 1
 students.to_csv('students.csv', index=False) #task 2
 df = pd.read_csv('students.csv') #task 3
 
+
 task_4 = df.loc[:, 'math']
 task_5 = df.loc[:, ['name', 'math', 'english']]
 task_6 = df.club
